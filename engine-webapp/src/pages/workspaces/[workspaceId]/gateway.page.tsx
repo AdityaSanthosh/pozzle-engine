@@ -9,7 +9,6 @@ import {
   TextInput,
   Text,
   Title,
-  Code,
 } from '@mantine/core';
 import { Prism } from '@mantine/prism';
 import { useRouter } from 'next/router';
@@ -49,26 +48,23 @@ const SAMPLE_CURL = `
   curl --location --request POST {gatewayURL} \
   --header 'Authorization: Bearer {token}' \
   --header 'Content-Type: application/json' \
-  --data-raw '{"query":"query GetGithub {\n  github {\n    repository(name: \"engine\", owner: \"poozlehq\") {\n      issues(first: 2) {\n        nodes {\n          title\n        }\n      }\n    }\n  }\n\n\n}","variables":{}}'
+  --data-raw '{"query":"query GetGithub {\n  github {\n    repository(name: \"engine\", owner: \"poozlehq\") {\n      issues(first: 2) {\n        nodes {\n          title\n        }\n      }\n    }\n  }\n}","variables":{}}'
 `;
 
 const SAMPLE_NODEJS_AXIOS = `
   var axios = require('axios');
   var data = JSON.stringify({
     query: \`query GetGithub {
-    github {
-      repository(name: "engine", owner: "poozlehq") {
-        issues(first: 2) {
-          nodes {
-            title
+      github {
+        repository(name: "engine", owner: "poozlehq") {
+          issues(first: 2) {
+            nodes {
+              title
+            }
           }
         }
       }
-    }
-
-
-  }\`,
-    variables: {}
+    }\`,
   });
 
   var config = {

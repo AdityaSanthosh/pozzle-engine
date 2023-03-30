@@ -8,7 +8,7 @@ Poozle is a service that contains everything you need to work with APIs.
 
 It contains:
 
-- a full OAuth for supported APIs
+- a authentication management system
 - a GraphQL layer for the APIs
 - a monitoring service to see latency, success rate and error rate
 
